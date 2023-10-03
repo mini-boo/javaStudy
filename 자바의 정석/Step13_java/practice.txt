@@ -1,0 +1,28 @@
+[기능 정의]
+콘서트 예매 조회 기능
+- 콘서트 검색 > (콘서트 예매 이후) 예매내역 업로드 확인 > 예매내역 삭제
+
+1. DTO
+	1) ConcertInformation
+		- concertName : 콘서트 이름
+		- concertID : 콘서트 id 
+    	      - concertDate : 콘서트 날짜 Date
+		- concertPlace : 콘서트 장소
+		- Customer : 고객
+		
+	2) Customer(등록된 고객 정보)
+		- userId : 고객아이디
+		- userName : 고객이름
+		- userAge : 고객나이
+		- userSeat : 예매좌석
+		- 입금 여부 Y/N
+    
+   3) Reservation information (예매 정보)
+		- userId
+		- concertID
+		- 예매일자
+
+2. 전체 프로젝트의 기능(메소드 정의 : 이름, type, 파라미터)
+	1) 콘서트 검색 : getConcert (String concertName)
+	2) 예매내역 업로드 : concertInsert (ReservationInformation)
+	3) 예매내역 삭제 : concertDelete (String concertName, String userId)
